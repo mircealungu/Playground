@@ -1,6 +1,6 @@
 Playground
 ==========
 
-A place where I try out different stuff. It might traces of: 
+A place where I try out different stuff. It might contain traces of: 
 
-- a HelloWorld with Javassist in folder java and package lu.mir.jsst.helloworld
+- a Hello World program in Javassist (in /java and package lu.mir.jsst.helloworld)
