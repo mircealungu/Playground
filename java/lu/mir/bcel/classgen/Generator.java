@@ -29,7 +29,7 @@ public class Generator {
 		// 1. reference to the static out filed in java.lang.System
 		il.append ( new GETSTATIC(cpg.addFieldref("java.lang.System", "out", "Ljava/io/PrintStream;")));
 		// 2. push the constant to be printed on the stack
-		il.append ( new LDC (cpg.addString("Hello BCEL!")));
+		il.append ( new LDC (cpg.addString("**** Hello world from the BCEL generated class! ****")));
 		// 3. Invoke the print method
 		il.append ( new INVOKEVIRTUAL(cpg.addMethodref("java.io.PrintStream", "println", "(Ljava/lang/String;)V")));
 		// 4. return from the method
