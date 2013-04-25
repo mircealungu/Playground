@@ -3,4 +3,4 @@ Playground
 
 A place where I try out different stuff. It might contain traces of: 
 
-- a Hello World program in Javassist (in /java and package lu.mir.jsst.helloworld)
+- Javassist (a Hello World program in /java/lu.mir.jsst.helloworld)
