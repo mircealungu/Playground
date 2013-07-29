@@ -1,7 +1,7 @@
 EDITOR=subl
 
 all: O0 O1 O2 
-	${EDITOR} mainO*.s main.c
+	$(EDITOR) mainO*.s main.c
 
 O0:
 	cc -S main.c -o mainO0.s 
