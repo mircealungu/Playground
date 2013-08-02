@@ -20,6 +20,33 @@ int straightforward(int number) {
 }
 
 int optimized1 (int number) {
+	int b1, b2, xor1, or1;
+	int count = 0;
+
+	b1 = number & 65535;
+	b2 = (number >> 16);
+
+	xor1 = b1 ^ b2;
+
+	or1 = b1 | b2;
+
+	while (or1 != 0) {
+		if (or1 & 1) {
+			if (xor1 & 1) 
+				count++;
+			else 
+				count += 2;
+		}
+			
+		or1 >>= 1;
+		xor1 >>= 1;
+	}
+
+	return count;
+}
+
+
+int optimized2 (int number) {
 	int b1, b2, b3, b4, xor1, xor2, or1, or2;
 	int count = 0;
 
@@ -58,12 +85,12 @@ int optimized1 (int number) {
 	}
 	return count;
 }
-
 	
-const int FUNC_COUNT = 2;
+const int FUNC_COUNT = 3;
 function funcs [FUNC_COUNT] = {
 	{"straightforward", &straightforward},
-	{"optimized1", &optimized1}
+	{"optimized1", &optimized1},
+	{"optimized2", &optimized2}
 };
 
 int main(int argc, char **args) 
