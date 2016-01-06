@@ -108,9 +108,9 @@ print board.solution()
 
 
 def solve (board, history): 
-	if solution(board):
+	if board.solution():
 		print "found a solution"
-		print_board(board)
+			
 
 
 
